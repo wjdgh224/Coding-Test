@@ -1,0 +1,71 @@
+#List
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(a)
+print(a[4])#인덱스
+
+a = list() or []#빈 리스트
+print(a)
+
+n = 10#크기가 n인 리스트
+a = [0] * n
+print(a)
+
+#Indexing
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(a[-1])#뒤에서 부터
+print(a[-3])
+a[3] = 7#변경
+print(a)
+
+#Slicing
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(a[1 : 4])#시작 인덱스 : n번 째
+
+#Comprehension
+array = [i for i in range(20) if i % 2 == 1]#0 ~ 19 중 홀수
+print(array)
+
+array = []
+for i in range(20):
+  if i % 2 == 1:
+    array.append(i)
+print(array)
+
+array = [i * i for i in range(1, 10)]#1 ~ 9 제곱 값
+print(array)
+
+#N * M 크기의 2차원 리스트
+n = 3
+m = 4
+array = [[0] * m for _ in range(n)]#반복을 위한 변수의 값을 무시, [[0] * m] * n(잘못된 방법, 3개의 리스트가 같은 레퍼런스로 인식)
+print(array)
+
+#리스트 관련 메서드
+a = [1, 4, 3]
+print("기본 리스트: ", a)
+
+a.append(2)#O(1)
+print("삽입: ", a)
+
+a.sort()
+print("오름차순 정렬: ", a)
+
+a.sort(reverse = True)
+print("내림차순 정렬: ", a)
+
+a.reverse()
+print("원소 뒤집기: ", a)
+
+a.insert(2, 3)#O(N)
+print("인덱스 2에 3 추가: ", a)
+
+print("값이 3인 데이터 개수: ", a.count(3))
+
+a.remove(1)#O(N)
+print("값이 1인 데이터 삭제: ", a)
+
+a = [1, 2, 3, 4, 5, 5, 5]
+remove_set = {3, 5}#집합
+
+result = [i for i in a if i not in remove_set]
+print(result)
