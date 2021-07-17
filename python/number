@@ -1,0 +1,59 @@
+//Integer
+a = 1000
+print(a)
+
+a = -7
+print(a)
+
+a = 0
+print(a)
+
+//Real Number
+a = 157.93
+print(a)
+
+a = -1837.2
+print(a)
+
+a = 5.//0생략 가능
+print(a)
+
+a = -.7
+print(a)
+
+//Exponent 유호숫자*e^지수 = 유효숫자*10^지수
+a = 1e9
+print(a)
+
+a = 75.25e1
+print(a)
+
+a = 3954e-3
+print(a)
+
+//error
+a = 0.3 + 0.6
+print(a)
+
+if a == 0.9:
+  print(True)
+else:
+  print(False)
+  
+//round()
+a = 0.3 + 0.6
+print(round(a, 4))
+
+if round(a, 4) == 0.9:
+  print(True)
+else:
+  print(False)
+  
+//operation
+a = 7
+b = 3
+
+print(a / b)//
+print(a & b)//나머지
+print(a // b)//몫
+print(a ** b)//거듭제곱
