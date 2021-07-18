@@ -1,0 +1,31 @@
+#키-값 쌍을 데이터로 가짐.
+#O(1)
+
+data = dict()
+data['사과'] = 'APPLE'
+data['바나나'] = 'Banana'
+data['코코넛'] = 'Coconut'
+
+print(data)#{'사과': 'APPLE', '바나나': 'Banana', '코코넛': 'Coconut'}
+
+data = dict()
+data['사과'] = 'Apple'
+data['바나나'] = 'Banana'
+data['코코넛'] = 'Coconut'
+
+if '사과' in data:#in은 리스트나 튜플에서도 사용가능
+  print("'사과'를 키로 가지는 데이터가 존재합니다.")
+  
+#메소드
+data = dict()
+data['사과'] = 'Apple'
+data['바나나'] = 'Banana'
+data['코코넛'] = 'Coconut'
+
+key_list = data.keys()#키
+value_list = data.values()#값
+print(key_list)
+print(value_list)
+
+for key in key_list:
+  print(data[key])
