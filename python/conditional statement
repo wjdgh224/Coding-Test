@@ -62,3 +62,4 @@ remove_set = {3, 5}
 result = [i for i in a if i not in remove_set]
 
 print(result)
+#조건문 부등식을 수학의 부등식과 같게 사용 가능. 0 < 
