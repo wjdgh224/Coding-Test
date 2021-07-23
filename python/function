@@ -1,0 +1,22 @@
+def add(a, b):
+  return a + b
+
+print(add(3, 7))
+
+def add(a, b):#return 없음.
+  print('함수의 결과:', a + b)
+
+add(3, 7)
+add(b = 3, a = 7)
+
+a = 0#함수 안에서 함수 밖의 변수 데이터를 변경.
+
+def func():
+  global a
+  a += 1
+  
+for i in range(10):
+  func()
+print(a)
+
+print((lambda a, b: a + b)(3, 7))#간단한 함수를 정의 할 때 사용.
