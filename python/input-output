@@ -1,0 +1,29 @@
+#데이터 수
+n = int(input())
+#각 데이터를 공백으로 구분
+data = list(map(int, input().split()))
+
+data.sort(reverse = True)
+print(data)
+
+#적은 수의 데이터
+n, m, k = map(int, input().split())
+
+print(n, m, k)
+
+import sys#입력 개수가 많을 때
+sys.stdin.readline().rstrip()#rstrip()이 공백 문자 제거
+
+data = sys.stdin.readline().rstrip()
+print(data)
+
+a = 1
+b = 1
+print(a, b)#print()는 기본적으로 출력 후 줄 바꿈
+
+answer = 7
+
+print("정답은 " + answer + "입니다.")#오류 : 문자열 자료형끼리만 더하기 연산 가능
+print("정답은 " + str(answer) + "입니다.")#데이터 문자열 바꾸기, 콤마를 기준으로 출력
+print("정답은", str(answer), "입니다.")#의도치 않은 공백삽입
+print(f"정답은 {answer}입니다.")#f-string : 자료형의 변환 없이 사용가능
