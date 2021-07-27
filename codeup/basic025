@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int i = scanner.nextInt(); int divide = 10000, count = 0; String tmp;
+		while(true) {
+			System.out.print("[" + i/divide);
+			i = i%divide; tmp = Integer.toString(i);
+			if(count==1) {
+				System.out.print("]");
+				break;
+			}
+			for(int j=0; j<tmp.length(); j++) {
+				System.out.print("0");
+			}
+			System.out.println("]");
+			divide = divide/10;
+			if(divide==1) {
+				count++;
+				continue;
+			}
+		}
+	}
+}
