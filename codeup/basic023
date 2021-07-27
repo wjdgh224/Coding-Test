@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		double d = scanner.nextDouble();
+		String str = Double.toString(d); String []spt = str.split("\\.");
+		System.out.print((int)d + "\n" + spt[1]);
+		scanner.close();
+	}
+}
