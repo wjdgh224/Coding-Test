@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String str = scanner.next(); String spt[] = str.split("\\.");
+		System.out.print(spt[2] + "-" + spt[1] + "-" + spt[0]);
+		scanner.close();
+	}
+}
