@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String str = scanner.next();
+		String spt[] = str.split("\\.");//점을 표현할 때 주의!
+		System.out.print(spt[0] + ".");
+		if(Integer.parseInt(spt[1])<10)
+			System.out.print("0" + spt[1] + ".");
+		else
+			System.out.print(spt[1] + ".");
+		if(Integer.parseInt(spt[2])<10)
+			System.out.print("0" + spt[2]);
+		else
+			System.out.print(spt[1]);
+
+		scanner.close();
+	}
+}
