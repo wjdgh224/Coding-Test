@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String str = scanner.nextLine();
+		int n = Integer.valueOf(str, 16);//parseInt
+		System.out.printf("%o", n);
+		scanner.close();
+	}
+}
