@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int n = scanner.nextInt();
+		String str = Integer.toHexString(n);
+		str = str.toUpperCase();
+		System.out.print(str);
+		scanner.close();
+	}
+}
