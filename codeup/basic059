@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		System.out.print(~a);//2진수의 부정 후 10진수 출력.
+		scanner.close();
+	}
+}
