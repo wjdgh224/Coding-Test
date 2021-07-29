@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		char a = scanner.next().charAt(0);
+		switch(a) {
+		case 'A':
+			System.out.print("best!!!");
+			break;
+		case 'B':
+			System.out.print("good!!");
+			break;
+		case 'C':
+			System.out.print("run!");
+			break;
+		case 'D':
+			System.out.print("slowly~");
+			break;
+		default:
+			System.out.println("what?");
+		}
+		scanner.close();
+	}
+}
