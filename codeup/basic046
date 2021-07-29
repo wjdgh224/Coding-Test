@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int x = scanner.nextInt();
+		int y = scanner.nextInt();
+		int z = scanner.nextInt();
+		int sum = x + y + z;
+		System.out.println(sum);
+		System.out.println(sum/3.);	
+		scanner.close();
+	}
+}
