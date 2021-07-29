@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		if(a == b)//Java에서는 부울과 정수가 다른 타입으로 표현.
+			System.out.print(1);
+		else
+			System.out.print(0);
+		scanner.close();
+	}
+}
