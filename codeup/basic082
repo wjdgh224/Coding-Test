@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		String c = scanner.next();
+		for(int i=1; i<16; i++) {
+			System.out.println(c +"*" + Integer.toString(i, 16).toUpperCase() + "="
+					+ Integer.toString(Integer.parseInt(c, 16)*i, 16).toUpperCase());
+			
+		}
+		scanner.close();
+	}
+}
