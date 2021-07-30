@@ -8,7 +8,6 @@ import java.util.*;
 		int c = scanner.nextInt();
 		int d = scanner.nextInt();
 		System.out.println(Math.round(a*b*c*d/(8.*1024*1024)*10)/10. + " MB");
-		
 		scanner.close();
 	}
 }
