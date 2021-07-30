@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int a = scanner.nextInt();
+		int b = scanner.nextInt();
+		int c = scanner.nextInt();
+		System.out.println(Math.round(a*b*c/(8.*1024*1024)*100)/100. + " MB");
+		
+		scanner.close();
+	}
+}
