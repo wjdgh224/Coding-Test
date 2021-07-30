@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		char c = scanner.next().charAt(0);
+		for(int i=96; i<c; i++) {
+			System.out.print((char)(i+1) + " ");
+		}
+		scanner.close();
+	}
+}
