@@ -1,0 +1,18 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int x = scanner.nextInt(); int [] array = new int[23];
+		Arrays.fill(array, 0);
+		for(int i=0; i<x; i++) {
+			int y = scanner.nextInt();
+			array[y-1]++;
+		}
+		for(int j=0; j<23; j++) {
+			System.out.print(array[j] + " ");
+		}
+		scanner.close();
+	}
+}
