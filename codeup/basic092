@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+ public class practice {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int x = scanner.nextInt();
+		int y = scanner.nextInt();
+		int z = scanner.nextInt();
+		//세 숫자가 모두 각각 나누어 떨어지는 첫 수.
+		int day = 1;
+		while(day%x != 0 || day%y != 0 || day%z != 0) day++;
+		System.out.println(day);
+		scanner.close();
+	}
+}
