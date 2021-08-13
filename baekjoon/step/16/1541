@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
+    	String s = sc.nextLine();
+    	String plus, minus; StringTokenizer st1, st2;
+    	
+    	int index = -1;  int sum = 0;
+    	index = s.indexOf('-');
+    	if(index != -1) {
+    		plus = s.substring(0, index);
+    		minus = s.substring(index, s.length());
+    		st1 = new StringTokenizer(plus,"+-");
+    		st2 = new StringTokenizer(minus,"+-");
+ 
+	    	while(st1.hasMoreTokens())
+	    		sum += Integer.parseInt(st1.nextToken());
+	    	while(st2.hasMoreTokens())
+	    		sum += Integer.parseInt(st2.nextToken())*(-1);
+    	}
+    	else {
+    		st1 = new StringTokenizer(s,"+-");
+    		while(st1.hasMoreTokens())
+	    		sum += Integer.parseInt(st1.nextToken());
+    	}
+    	
+    	System.out.println(sum);
+    }
+}
