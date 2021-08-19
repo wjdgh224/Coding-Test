@@ -1,0 +1,35 @@
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException{
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    	String s = br.readLine(); int n = Integer.parseInt(s);
+    	int old[] = new int[n]; String name[] = new String[n];
+    	String spt[];
+    	
+    	for(int i=0; i<n; i++) {
+    		String str = br.readLine(); spt = str.split(" ");
+    		old[i] = Integer.parseInt(spt[0]);
+    		name[i] = spt[1];
+    	}
+    	int j=0;
+    	for(int i=1; i<n; i++) {
+    		int temp = old[i];
+    		String t = name[i];
+    		for(j=i-1; j>=0; j--) {
+    			if(temp >= old[j])
+    				break;
+    			old[j+1] = old[j];
+    			name[j+1] = name[j];
+    		}
+    		old[j+1] = temp;
+    		name[j+1] = t;
+    	}
+    	for(int k=0; k<n; k++) {
+    		bw.write(old[k] + " " + name[k]);
+    		bw.newLine();
+    	}
+    	bw.flush();
+    }
+}
