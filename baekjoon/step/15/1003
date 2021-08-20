@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.Arrays;
+
+public class Main {
+	static int count0[] = new int[40];
+	static int count1[] = new int[40];
+	static int fibo1(int n) { 
+		if(count1[n]!=0) {
+			return count1[n];
+			}
+		if(n==0) {
+			count1[0] = 0;
+			return 0;
+			}
+		if(n==1) {
+			count1[1] = 1;
+			return 1;
+			}
+		return count1[n] = fibo1(n-1) + fibo1(n-2);
+	}
+	static int fibo0(int n) { 
+		if(count0[n]!=0) {
+			return count0[n];
+			}
+		if(n==0) {
+			count0[0] = 1;
+			return 1;
+			}
+		if(n==1) {
+			count0[1] = 0;
+			return 0;
+			}
+		return count0[n] = fibo0(n-1) + fibo0(n-2);
+	}
+	public static void main(String[] args) throws IOException{
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    	String s = br.readLine(); int n = Integer.parseInt(s);
+    	for(int i=0; i<n; i++) {
+    		int num = Integer.parseInt(br.readLine());
+    		bw.write(fibo0(num) + " " + fibo1(num)); bw.newLine();
+    	}
+    	bw.flush();
+    }
+}
