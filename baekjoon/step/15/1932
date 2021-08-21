@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+    	int n = sc.nextInt();
+    	int array[] = new int[n*(n+1)/2];
+    	for(int i=0; i<n*(n+1)/2; i++) {
+    		array[i] = sc.nextInt();
+    	}
+    	
+    	int index = 1; int left, right, max, result = -1;
+    	for(int i=2; i<=n; i++) {//줄번호
+    		for(int j=1; j<=i; j++) {//각 열
+    			left = index - (i - 1);
+    			right = index - i; 
+    			if(j==1) {
+    				array[index] += array[left];
+    			}
+    			if(j==i) { 
+    				array[index] += array[right];
+    			}
+    			if(j!=1 && j!=i) {
+    				array[index] += Math.max(array[right], array[left]);
+    			}
+    			index++;
+    		}
+    	}
+    	for(int i=index-1; i>index-n-1; i--) {
+    		if(array[i]>result)
+    			result = array[i];
+    	}
+    	System.out.println(result);
+    	
+    }
+}
